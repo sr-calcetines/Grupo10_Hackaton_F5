@@ -131,7 +131,7 @@ Before you start to read how to install the project you'll need these requiremen
 ```
 php artisan test --coverage
 ```
-![JOJO test](https://github.com/user-attachments/assets/d0360887-593a-4941-b1eb-45555340a147)
+![test]()
 
 ***
 ### Coverage
@@ -144,7 +144,7 @@ php artisan test --coverage-html=coverage-report
 > Everytime that you do **new tests** you need to put the command above in the **VSC** terminal, so it can **update** your coverage.
 This will add a **folder** called *coverage-report*, go to the folder, go to the *index.html*, and then **open with live server**. After that you should see this page:
 
-![coverage-report](https://github.com/user-attachments/assets/338277fa-b18d-491a-9701-4a703bff4a39)
+![coverage-report]()
 
 ***
 ## Languages and tools
@@ -172,6 +172,18 @@ https://www.figma.com/design/IKlXj9X5BYDDGoik9Tryti/luxuri-inmobiliaria?node-id=
 ## Jira Backlog
 If you want to take a look to the workflow of the project click this link:
 
+https://pgavilansanc-1736407566716.atlassian.net/jira/software/projects/GHF/boards/4
+***
+
+***
+## AWS Schemas
+If you want to take a look to the AWS Schemas of the project click this link:
+
+https://lucid.app/lucidchart/c3703016-4fa3-4f53-a367-4d4722e1afe5/edit?invitationId=inv_ca47d7ef-00f3-4df1-9f0e-bf366a95f7a6&page=0_0#
+***
+
+***
+## Flowchart and UML diagram
 
 ***
 
