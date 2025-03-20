@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Card from "../../components/Card/Card";
 import Paginator from "../../components/Paginator/Paginator";
 import mockData from "../../data/mockData";
@@ -8,6 +9,7 @@ import NavBar from "../../components/Navbar/Navbar";
 function SearchingPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [filteredData, setFilteredData] = useState(mockData);
+
   const itemsPerPage = 6;
 
   const handleFilter = (filters) => {
@@ -26,7 +28,6 @@ function SearchingPage() {
     if (filters.priceMax) {
       filtered = filtered.filter((item) => item.price <= filters.priceMax);
     }
-
     if (filters.rooms) {
       filtered = filtered.filter(
         (item) => item.rooms === parseInt(filters.rooms)
@@ -75,6 +76,7 @@ function SearchingPage() {
 
   <SearchingBar onFilter={handleFilter} />
 
+<<<<<<< HEAD
   <div className="row">
     {currentItems.map((item) => (
       <div key={item.id} className="col-12 col-md-4 mb-4">
@@ -87,6 +89,24 @@ function SearchingPage() {
           bathrooms={item.bathrooms}
           size={item.size}
         />
+=======
+      <div className="row">
+        {currentItems.map((item) => (
+          <div key={item.id} className="col-12 col-sm-6 col-lg-4 mb-4">
+            <Link to={`/detail/${item.id}`} style={{ textDecoration: "none" }}>
+              <Card
+                img={item.img}
+                name={item.name}
+                price={item.price}
+                rooms={item.rooms}
+                bedrooms={item.bedrooms}
+                bathrooms={item.bathrooms}
+                size={item.size}
+              />
+            </Link>
+          </div>
+        ))}
+>>>>>>> 5d277acb5c20a04b0b9ddb89a67bba5fd9399bbb
       </div>
     ))}
   </div>

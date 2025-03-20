@@ -28,9 +28,8 @@ function SearchingBar({ onFilter }) {
 
   return (
     <form onSubmit={handleSubmit} className="mb-4">
-      <div className="row">
-  
-        <div className="col-12 col-md-3">
+      <div className="row d-flex justify-content-start align-items-center g-2">
+        <div className="col-auto">
           <input
             type="text"
             name="name"
@@ -41,7 +40,7 @@ function SearchingBar({ onFilter }) {
           />
         </div>
 
-        <div className="col-12 col-md-3">
+        <div className="col-auto">
           <input
             type="number"
             name="priceMin"
@@ -49,11 +48,11 @@ function SearchingBar({ onFilter }) {
             onChange={handleChange}
             className="form-control"
             placeholder="Precio mínimo"
-            step="0.01" 
+            step="0.01"
           />
         </div>
 
-        <div className="col-12 col-md-3">
+        <div className="col-auto">
           <input
             type="number"
             name="priceMax"
@@ -65,7 +64,7 @@ function SearchingBar({ onFilter }) {
           />
         </div>
 
-        <div className="col-12 col-md-3">
+        <div className="col-auto">
           <select
             name="rooms"
             value={filters.rooms}
@@ -81,7 +80,7 @@ function SearchingBar({ onFilter }) {
           </select>
         </div>
 
-        <div className="col-12 col-md-3">
+        <div className="col-auto">
           <select
             name="bedrooms"
             value={filters.bedrooms}
@@ -97,7 +96,7 @@ function SearchingBar({ onFilter }) {
           </select>
         </div>
 
-        <div className="col-12 col-md-3">
+        <div className="col-auto">
           <select
             name="bathrooms"
             value={filters.bathrooms}
@@ -113,7 +112,7 @@ function SearchingBar({ onFilter }) {
           </select>
         </div>
 
-        <div className="col-12 col-md-3">
+        <div className="col-auto">
           <input
             type="number"
             name="size"
@@ -125,8 +124,8 @@ function SearchingBar({ onFilter }) {
           />
         </div>
 
-        <div className="col-12 mt-3 text-center">
-          <button type="submit" className="btn btn-primary">
+        <div className="col-auto">
+          <button type="submit" className="btn btn-dark">
             Filtrar
           </button>
         </div>
