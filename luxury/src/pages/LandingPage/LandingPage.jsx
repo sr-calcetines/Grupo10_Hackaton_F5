@@ -6,8 +6,8 @@ function LandingPage() {
     <div className="landing-page">
       <div className="overlay">
         <div className="content">
-          <h1>Bienvenido Luxury</h1>
-          <Button text="Explorar" to="/search" />
+          <h1>Bienvenido a Luxury</h1>
+          <Button text="Encuentra tu hogar" to="/search" />
         </div>
       </div>
     </div>

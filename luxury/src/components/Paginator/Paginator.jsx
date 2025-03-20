@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "./Paginator.css";
 
 function Paginator({ currentPage, totalPages, onPageChange }) {
   const handlePageChange = (page) => {

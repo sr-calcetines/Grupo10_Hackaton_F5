@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import Card from "../../components/Card/Card";
 import Paginator from "../../components/Paginator/Paginator";
 import mockData from "../../data/mockData";
@@ -27,7 +27,6 @@ function SearchingPage() {
     if (filters.priceMax) {
       filtered = filtered.filter((item) => item.price <= filters.priceMax);
     }
-
     if (filters.rooms) {
       filtered = filtered.filter(
         (item) => item.rooms === parseInt(filters.rooms)
@@ -76,7 +75,7 @@ function SearchingPage() {
 
       <div className="row">
         {currentItems.map((item) => (
-          <div key={item.id} className="col-12 col-md-4 mb-4">
+          <div key={item.id} className="col-12 col-sm-6 col-lg-4 mb-4">
             <Link to={`/detail/${item.id}`} style={{ textDecoration: "none" }}>
               <Card
                 img={item.img}

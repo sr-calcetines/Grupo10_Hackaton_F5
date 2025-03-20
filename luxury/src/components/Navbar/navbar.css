@@ -1,0 +1,26 @@
+.navbar {
+  background-color: #031F1E;
+  color: #FAF9F6;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.navbar a {
+  color: #FAF9F6;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  color: #86B09C;
+}
+
+.navbar .nav-link.active {
+  color: #86B09C !important;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.5rem;
+}
+

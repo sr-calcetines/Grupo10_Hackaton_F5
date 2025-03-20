@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import "./Card.css"; 
 
 function Card({ id, img, name, price, rooms, bedrooms, bathrooms, size }) {
   return (
-    <div className="card" style={{ width: "18rem" }}>
+    <div className="card" style={{ width: "22rem" }}>
       <img src={img[0]} className="card-img-top" alt={name} />
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
