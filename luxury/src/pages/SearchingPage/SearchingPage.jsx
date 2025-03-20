@@ -3,6 +3,7 @@ import Card from "../../components/Card/Card";
 import Paginator from "../../components/Paginator/Paginator";
 import mockData from "../../data/mockData";
 import SearchingBar from "../../components/Searchingbar/Searchingbar";
+import NavBar from "../../components/Navbar/Navbar";
 
 function SearchingPage() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -64,37 +65,44 @@ function SearchingPage() {
   };
 
   return (
+    <>
+    <NavBar />
     <div className="container mt-5">
-      <h1 className="text-center mb-4">Buscar contenido</h1>
-      <p className="text-center mb-4">
-        Ingresa lo que deseas buscar en la barra de búsqueda.
-      </p>
+  <h1 className="text-center mb-4">Buscar contenido</h1>
+  <p className="text-center mb-4">
+    Ingresa lo que deseas buscar en la barra de búsqueda.
+  </p>
 
-      <SearchingBar onFilter={handleFilter} />
+  <SearchingBar onFilter={handleFilter} />
 
-      <div className="row">
-        {currentItems.map((item) => (
-          <div key={item.id} className="col-12 col-md-4 mb-4">
-            <Card
-              img={item.img}
-              name={item.name}
-              price={item.price}
-              rooms={item.rooms}
-              bedrooms={item.bedrooms}
-              bathrooms={item.bathrooms}
-              size={item.size}
-            />
-          </div>
-        ))}
+  <div className="row">
+    {currentItems.map((item) => (
+      <div key={item.id} className="col-12 col-md-4 mb-4">
+        <Card
+          img={item.img}
+          name={item.name}
+          price={item.price}
+          rooms={item.rooms}
+          bedrooms={item.bedrooms}
+          bathrooms={item.bathrooms}
+          size={item.size}
+        />
       </div>
+    ))}
+  </div>
 
-      <Paginator
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={handlePageChange}
-      />
-    </div>
+  <Paginator
+    currentPage={currentPage}
+    totalPages={totalPages}
+    onPageChange={handlePageChange}
+  />
+</div>
+  </>
   );
 }
 
 export default SearchingPage;
+
+
+
+
