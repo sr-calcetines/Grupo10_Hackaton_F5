@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-function Card({ img, name, price, rooms, bedrooms, bathrooms, size }) {
+function Card({ id, img, name, price, rooms, bedrooms, bathrooms, size }) {
   return (
     <div className="card" style={{ width: "18rem" }}>
-      <img src={img} className="card-img-top" alt={name} />
+      <img src={img[0]} className="card-img-top" alt={name} />
       <div className="card-body">
         <h5 className="card-title">{name}</h5>
         <p className="card-text">Precio: ${price}</p>
@@ -15,15 +15,5 @@ function Card({ img, name, price, rooms, bedrooms, bathrooms, size }) {
     </div>
   );
 }
-
-Card.propTypes = {
-  img: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  rooms: PropTypes.number.isRequired,
-  bedrooms: PropTypes.number.isRequired,
-  bathrooms: PropTypes.number.isRequired,
-  size: PropTypes.number.isRequired,
-};
 
 export default Card;

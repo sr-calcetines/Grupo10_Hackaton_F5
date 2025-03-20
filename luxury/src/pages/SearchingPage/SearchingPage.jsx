@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom"; 
 import Card from "../../components/Card/Card";
 import Paginator from "../../components/Paginator/Paginator";
 import mockData from "../../data/mockData";
@@ -7,6 +8,7 @@ import SearchingBar from "../../components/Searchingbar/Searchingbar";
 function SearchingPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const [filteredData, setFilteredData] = useState(mockData);
+
   const itemsPerPage = 6;
 
   const handleFilter = (filters) => {
@@ -75,15 +77,17 @@ function SearchingPage() {
       <div className="row">
         {currentItems.map((item) => (
           <div key={item.id} className="col-12 col-md-4 mb-4">
-            <Card
-              img={item.img}
-              name={item.name}
-              price={item.price}
-              rooms={item.rooms}
-              bedrooms={item.bedrooms}
-              bathrooms={item.bathrooms}
-              size={item.size}
-            />
+            <Link to={`/detail/${item.id}`} style={{ textDecoration: "none" }}>
+              <Card
+                img={item.img}
+                name={item.name}
+                price={item.price}
+                rooms={item.rooms}
+                bedrooms={item.bedrooms}
+                bathrooms={item.bathrooms}
+                size={item.size}
+              />
+            </Link>
           </div>
         ))}
       </div>
